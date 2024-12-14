@@ -1,14 +1,14 @@
 let modules = [];
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(1280, 720);
   background(0);
 
   textStyle(BOLD);
   textSize(400);
   textAlign(CENTER, CENTER);
   fill(255);
-  text("A", width / 2, height / 2 + 50);
+  text("Hello!", width / 2, height / 2 + 50);
 
   let gap = 10;
 
