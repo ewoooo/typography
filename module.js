@@ -52,7 +52,6 @@ class Module {
     noFill();
     beginShape();
     stroke(220);
-    for 
     
     for (let path of this.trail) {
       vertex(path.x, path.y);
