@@ -1,14 +1,20 @@
 let modules = [];
 
 function setup() {
-	createCanvas(1280, 720);
+	createCanvas(windowWidth, 720);
 	background(0);
 
 	textStyle(BOLD);
-	textSize(400);
+	if (windowWidth <= 1200) {
+		textSize(100);
+	} else {
+		textSize(400);
+	}
+
 	textAlign(CENTER, CENTER);
 	fill(255);
-	text("Hello", width / 2, height / 2 + 50);
+	textFont("Geist");
+	text("Neuhas", width / 2, height / 2 + 50);
 
 	let gap = 10;
 
@@ -25,8 +31,7 @@ function setup() {
 }
 
 function draw() {
-	background(240);
-
+	background(0);
 	for (let module of modules) {
 		module.update();
 		module.display();

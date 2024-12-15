@@ -41,7 +41,7 @@ class Module {
 		}
 
 		this.trail.push(this.pos.copy());
-		if (this.trail.length > 40) {
+		if (this.trail.length > 30) {
 			this.trail.shift();
 		}
 	}
@@ -51,14 +51,14 @@ class Module {
 		push();
 		noFill();
 		beginShape();
-		stroke(220);
+		stroke("green");
 		for (let path of this.trail) {
 			vertex(path.x, path.y);
 		}
 		endShape();
 
 		noStroke();
-		fill("lightgray");
+		fill("red");
 		translate(this.pos.x, this.pos.y);
 		rotate(this.angle);
 		ellipse(0, 0, this.size, this.size);
